@@ -15,7 +15,7 @@ function generateMenu() {
     <div class="menu-category">Work Experience</div>
     <div class="menu-item"><a href="internship.html">Internships</a></div>
     <div class="menu-item"><a href="fulltime.html">Fulltime</a></div>
-    <div class="menu-item"><a href="ta.html">TA&nbsp;duties</a></div>
+    <div class="menu-item"><a href="ta.html">Teaching</a></div>
 </td>
 </tr>
 </table>
