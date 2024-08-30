@@ -198,8 +198,8 @@ h1 {
   animation: slideIn 1s ease-out;
 }
 
-/* Styles for the bottom navy blue section */
-#bottom-section {
+/* Styles for the bottom navy blue section with quotes */
+#quotes-section {
   background-color: #003366; /* Navy blue color */
   color: white;
   padding: 20px;
@@ -250,6 +250,7 @@ Contact: subramaniyan [dot] 4 [at] osu [dot] edu
 <li><a href="oldnews.html">Click here for Old News</a></li>
 </ul>
 -->
+
 <h1>Selected Publications</h1>
 <ul>
 <li>Chen, Guoyu, Srinivasan Subramaniyan, and Xiaorui Wang. "Latency-Guaranteed Co-Location of Inference and Training for Reducing Data Center Expenses" IEEE 44th International Conference on Distributed Computing Systems (ICDCS) 2024.</li>
@@ -261,8 +262,8 @@ Contact: subramaniyan [dot] 4 [at] osu [dot] edu
 <li>Real Time Systems, Operating Systems, Embedded Systems & Systems for Machine Learning, Computer Architecture, Parallel Computing, High-Performance Computing</li>
 </ul>
 
-<!-- Bottom navy blue section for quotes -->
-<div id="bottom-section">
+<!-- New navy blue section for quotes -->
+<div id="quotes-section">
 <p id="quote-text">"The only way to do great work is to love what you do." - Steve Jobs</p>
 </div>
 
@@ -276,7 +277,7 @@ const quotes = [
   '"To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment." - Ralph Waldo Emerson'
 ];
 
-// Function to update the quote every 10 seconds
+// Function to update the quote every 4 seconds
 function updateQuote() {
   const quoteText = document.getElementById('quote-text');
   let currentIndex = 0;
@@ -284,7 +285,7 @@ function updateQuote() {
   setInterval(() => {
     quoteText.textContent = quotes[currentIndex];
     currentIndex = (currentIndex + 1) % quotes.length;
-  }, 4000); // 10000 milliseconds = 10 seconds
+  }, 4000); // 4000 milliseconds = 4 seconds
 }
 
 // Initialize the quote rotation
@@ -296,4 +297,3 @@ updateQuote();
 </table>
 </body>
 </html>
-
