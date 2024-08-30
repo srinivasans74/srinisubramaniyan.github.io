@@ -118,30 +118,14 @@ I also explore topics like Data Center Computing, Computer Architecture and Syst
 <meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <link rel="stylesheet" href="jemdoc.css" type="text/css" />
-<title>Srinivasan Subrmaniyan</title>
+<title>Srinivasan Subramaniyan</title>
 <style>
 /* CSS Animations and Styles */
 
 @keyframes gradientAnimation {
-  0% {
-    background-position: 0% 0%;
-  }
-  50% {
-    background-position: 100% 100%;
-  }
-  100% {
-    background-position: 0% 0%;
-  }
-}
-
-#toptitle {
-  background: linear-gradient(45deg, #f06, #f79, #a1c4fd);
-  background-size: 400% 400%;
-  animation: gradientAnimation 15s ease infinite;
-  padding: 20px;
-  color: white;
-  text-align: center;
-  border-radius: 10px;
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
 }
 
 @keyframes float {
@@ -150,17 +134,47 @@ I also explore topics like Data Center Computing, Computer Architecture and Syst
   100% { transform: translateY(0); }
 }
 
-.imgtable img {
-  animation: float 5s ease-in-out infinite;
-}
-
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
 
+@keyframes slideIn {
+  0% { transform: translateY(-50px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Full screen blue background */
+body {
+  background-color: #00aaff;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+#toptitle {
+  background: linear-gradient(45deg, #00aaff, #0044cc);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
 #toptitle h1 {
   animation: fadeIn 3s ease-in;
+}
+
+#computer-drawing {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  animation: slideIn 2s ease-out;
 }
 
 .menu-item a {
@@ -178,13 +192,18 @@ I also explore topics like Data Center Computing, Computer Architecture and Syst
   align-items: center;
 }
 
-#toptitle {
-  margin-bottom: 20px;
-}
-
 .imgtable {
   display: flex;
   align-items: center;
+}
+
+.imgtable img {
+  animation: float 5s ease-in-out infinite;
+}
+
+h1 {
+  margin-top: 20px;
+  animation: slideIn 1s ease-out;
 }
 </style>
 </head>
@@ -208,7 +227,7 @@ I also explore topics like Data Center Computing, Computer Architecture and Syst
 </td>
 <td id="layout-content">
 <div id="toptitle">
-<h1>Srinivasan Subrmaniyan</h1>
+<h1>Srinivasan Subramaniyan</h1>
 </div>
 <table class="imgtable"><tr><td>
 <img src="srini_1.jpg" alt="150px" width="150px" height="150px" />&nbsp;</td>
@@ -219,9 +238,7 @@ Contact: subramaniyan [dot] 4 [at] osu [dot] edu
 </td></tr></table>
 <h1>About me</h1>
 <ul>
-<li>I am a third-year PhD student in the Electrical and Computer Engineering Department at Ohio State University. I am pursuing my PhD under the supervision of 
-Dr. Xiaorui Wang. My main research Interests is in Embedded and Real-time Systems. 
-I also explore topics like Data Center Computing, Computer Architecture and Systems and cyber-physical systems.</li>
+<li>I am a third-year PhD student in the Electrical and Computer Engineering Department at Ohio State University. I am pursuing my PhD under the supervision of Dr. Xiaorui Wang. My main research Interests is in Embedded and Real-time Systems. I also explore topics like Data Center Computing, Computer Architecture and Systems and cyber-physical systems.</li>
 </ul>
 
 <!-- 
@@ -241,8 +258,6 @@ I also explore topics like Data Center Computing, Computer Architecture and Syst
 <ul>
 <li>Real Time Systems, Operating Systems, Embedded Systems & Systems for Machine Learning, Computer Architecture, Parallel Computing, High-Performance Computing</li>
 </ul>
-
-
 </td>
 </tr>
 </table>
