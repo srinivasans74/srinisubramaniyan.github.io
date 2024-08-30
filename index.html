@@ -110,7 +110,6 @@ I also explore topics like Data Center Computing, Computer Architecture and Syst
 </body>
 </html>
 -->
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
 "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
@@ -197,6 +196,16 @@ h1 {
   margin-top: 20px;
   animation: slideIn 1s ease-out;
 }
+
+/* Styles for the quotes section */
+#quotes-section {
+  background-color: #0044cc;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 20px;
+}
 </style>
 </head>
 <body>
@@ -250,6 +259,37 @@ Contact: subramaniyan [dot] 4 [at] osu [dot] edu
 <ul>
 <li>Real Time Systems, Operating Systems, Embedded Systems & Systems for Machine Learning, Computer Architecture, Parallel Computing, High-Performance Computing</li>
 </ul>
+
+<!-- Quotes Section -->
+<div id="quotes-section">
+<p id="quote-text">"The only way to do great work is to love what you do." - Steve Jobs</p>
+</div>
+
+<script>
+// Array of quotes
+const quotes = [
+  '"The only way to do great work is to love what you do." - Steve Jobs',
+  '"Success is not final, failure is not fatal: It is the courage to continue that counts." - Winston Churchill',
+  '"Life is what happens when you’re busy making other plans." - John Lennon',
+  '"In the end, we will remember not the words of our enemies, but the silence of our friends." - Martin Luther King Jr.',
+  '"To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment." - Ralph Waldo Emerson'
+];
+
+// Function to update the quote every 10 seconds
+function updateQuote() {
+  const quoteText = document.getElementById('quote-text');
+  let currentIndex = 0;
+
+  setInterval(() => {
+    quoteText.textContent = quotes[currentIndex];
+    currentIndex = (currentIndex + 1) % quotes.length;
+  }, 10000); // 10000 milliseconds = 10 seconds
+}
+
+// Initialize the quote rotation
+updateQuote();
+</script>
+
 </td>
 </tr>
 </table>
