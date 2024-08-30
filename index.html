@@ -52,6 +52,7 @@
       position: relative;
       color: white;
       overflow: hidden;
+      background: #333; /* Default background */
     }
 
     header h1 {
@@ -62,7 +63,6 @@
       position: relative;
     }
 
-    /* Flashing colors animation */
     @keyframes flashingColors {
       0% { color: #FF6347; }
       25% { color: #1E90FF; }
@@ -71,26 +71,41 @@
       100% { color: #FF6347; }
     }
 
-    /* Image rotation */
-    #image-container {
+    /* Snowfall Animation */
+    .snowfall {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
+      pointer-events: none;
+      overflow: hidden;
       z-index: 1;
+      background: rgba(0, 0, 0, 0.5);
     }
 
-    #image-container img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    .snowflake {
       position: absolute;
-      top: 0;
-      left: 0;
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.8;
+      pointer-events: none;
+      animation: snowfall linear infinite;
     }
+
+    @keyframes snowfall {
+      from {
+        transform: translateY(-100px);
+      }
+      to {
+        transform: translateY(calc(100vh + 100px));
+      }
+    }
+
+    /* Snowflake Sizes */
+    .snowflake:nth-child(1) { width: 10px; height: 10px; animation-duration: 10s; animation-delay: 0s; }
+    .snowflake:nth-child(2) { width: 15px; height: 15px; animation-duration: 12s; animation-delay: 2s; }
+    .snowflake:nth-child(3) { width: 20px; height: 20px; animation-duration: 14s; animation-delay: 4s; }
 
     /* Main Section Styles */
     main {
@@ -145,6 +160,27 @@
       background: #333;
       color: white;
     }
+
+    /* Visitor Counter Styles */
+    #visitor-counter {
+      text-align: center;
+      margin: 2rem 0;
+      font-size: 1.2rem;
+    }
+
+    /* Video Player Styles */
+    #video-section {
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 800px;
+      height: 450px;
+      border: none;
+    }
+
   </style>
 </head>
 <body>
@@ -162,15 +198,21 @@
   </nav>
 
   <header>
-    <div id="image-container">
-      <img src="https://via.placeholder.com/1500x600/FF6347" alt="Image 1">
-      <img src="https://via.placeholder.com/1500x600/1E90FF" alt="Image 2">
-      <img src="https://via.placeholder.com/1500x600/32CD32" alt="Image 3">
+    <div class="snowfall">
+      <div class="snowflake"></div>
+      <div class="snowflake"></div>
+      <div class="snowflake"></div>
+      <!-- Add more snowflakes as needed -->
     </div>
     <h1>Srinivasan Subramaniyan</h1>
   </header>
 
   <main>
+    <!-- Visitor Counter -->
+    <div id="visitor-counter">
+      <p>Visitors: <span id="visitor-count">0</span></p>
+    </div>
+
     <!-- About Me Section -->
     <section id="aboutme">
       <h2>About Me</h2>
@@ -197,18 +239,6 @@
       </ul>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience">
-      <h2>Experience</h2>
-      <ul>
-        <li>Internships at various leading tech companies</li>
-        <li>Full-time work experience in the tech industry</li>
-        <li>Teaching Assistant (TA) duties at Ohio State University</li>
-      </ul>
-    </section>
-
-  
-
     <!-- Education Section -->
     <section id="education">
       <h2>Education</h2>
@@ -218,10 +248,15 @@
       </ul>
     </section>
 
-      <!-- Quote Section -->
-      <div id="quotes-section">
-        <p id="quote-text">"The only way to do great work is to love what you do." - Steve Jobs</p>
-      </div>
+    <!-- Quote Section -->
+    <div id="quotes-section">
+      <p id="quote-text">"The only way to do great work is to love what you do." - Steve Jobs</p>
+    </div>
+
+    <!-- Video Section -->
+    <div id="video-section">
+      <iframe id="youtube-video" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+    </div>
 
   </main>
 
@@ -242,9 +277,7 @@
 
     // Function to update the quote every 4 seconds
     function updateQuote() {
-      const quoteText = document.get
-
-ElementById('quote-text');
+      const quoteText = document.getElementById('quote-text');
       let currentIndex = 0;
 
       setInterval(() => {
@@ -269,6 +302,32 @@ ElementById('quote-text');
     }
 
     setInterval(rotateImages, 4000); // Change image every 4 seconds
+
+    // Snowfall effect
+    function createSnowflakes() {
+      const snowfallContainer = document.querySelector('.snowfall');
+      for (let i = 0; i < 50; i++) {
+        const snowflake = document.createElement('div');
+        snowflake.classList.add('snowflake');
+        snowflake.style.left = Math.random() * 100 + 'vw';
+        snowflake.style.animationDuration = (Math.random() * 10 + 10) + 's';
+        snowflake.style.animationDelay = Math.random() * 10 + 's';
+        snowfallContainer.appendChild(snowflake);
+      }
+    }
+
+    createSnowflakes();
+
+    // Example visitor counter
+    function updateVisitorCount() {
+      const visitorCountElement = document.getElementById('visitor-count');
+      let count = parseInt(visitorCountElement.textContent, 10);
+      setInterval(() => {
+        visitorCountElement.textContent = count++;
+      }, 1000); // Increment every second (this is just for demonstration)
+    }
+
+    updateVisitorCount();
   </script>
 
 </body>
