@@ -120,6 +120,32 @@
       margin-bottom: 0;
     }
 
+    /* Button Styles */
+    .filter-buttons {
+      margin-bottom: 1rem;
+    }
+
+    .filter-buttons button {
+      padding: 0.5rem 1rem;
+      margin-right: 0.5rem;
+      border: none;
+      border-radius: 5px;
+      background-color: #003366;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .filter-buttons button:hover {
+      background-color: #00509e;
+    }
+
+    /* Hidden by default */
+    .hidden {
+      display: none;
+    }
+
     /* Footer Styles */
     footer {
       text-align: center;
@@ -142,56 +168,136 @@
     <a href="ta.html">TA Duties</a>
   </nav>
 
-  
+  <table id="tlayout">
+    <tr valign="top">
+      <td id="layout-menu">
+        <div class="menu-category">About</div>
+        <div class="menu-item"><a href="index.html" class="current">Home</a></div>
+        <div class="menu-item"><a href="CV_January21 (1).pdf">CV</a></div>
+        <div class="menu-item"><a href="https://www.linkedin.com/in/srinivasan-subramaniyan22/">LinkedIn</a></div>
+        <div class="menu-item"><a href="https://scholar.google.com/citations?user=luGswuwAAAAJ&hl=en&oi=ao">Google Scholar</a></div>
+        <div class="menu-item"><a href="Academics.html">Academics</a></div>
+        <div class="menu-category">Research</div>
+        <div class="menu-item"><a href="publications.html" class="current">Publications</a></div>
+        <div class="menu-item"><a href="awards.html">Awards</a></div>
+        <div class="menu-category">Experience</div>
+        <div class="menu-item"><a href="fulltime.html">Work Experience</a></div>
+        <div class="menu-item"><a href="ta.html">TA Duties</a></div>
+      </td>
       <td id="layout-content">
+        <div class="filter-buttons">
+          <button onclick="filterByYear()">By Year</button>
+          <button onclick="filterByType()">By Type</button>
+        </div>
+        
         <div id="toptitle">
           <h1>Publications</h1>
         </div>
 
-        <h2>Conference Papers</h2>
-        <ol>
-          <li>
-            <p>Chen, Guoyu, Srinivasan Subramaniyan, and Xiaorui Wang. "Latency-Guaranteed Co-Location of Inference and Training for Reducing Data Center Expenses" IEEE 44th International Conference on Distributed Computing Systems (ICDCS) 2024.</p>
-          </li>
-          <li>
-            <p>Ashuthosh, M. R., Krishna, S., Sudarshan, V., Subramaniyan, S., & Purnaprajna, M. (2022, February). MAPPARAT: A Resource Constrained FPGA-Based Accelerator for Sparse-Dense Matrix Multiplication. In 2022 35th International Conference on VLSI Design and 2022 21st International Conference on Embedded Systems (VLSID) (pp. 102-107). IEEE.</p>
-          </li>
-          <li>
-            <p>K. Vanishree, A. George, S. Gunisetty, S. Subramanian, S. Kashyap R., and M. Purnaprajna, "CoIn: Accelerated CNN Co-Inference through Data Partitioning on Heterogeneous Devices," 2020 6th International Conference on Advanced Computing and Communication Systems (ICACCS), 2020, pp. 90-95, doi: 10.1109/ICACCS48705.2020.9074444.</p>
-          </li>
-        </ol>
+        <div id="content">
+          <div id="by-year">
+            <h2>Conference Papers</h2>
+            <ol>
+              <li>
+                <p>Chen, Guoyu, Srinivasan Subramaniyan, and Xiaorui Wang. "Latency-Guaranteed Co-Location of Inference and Training for Reducing Data Center Expenses" IEEE 44th International Conference on Distributed Computing Systems (ICDCS) 2024.</p>
+              </li>
+              <li>
+                <p>Ashuthosh, M. R., Krishna, S., Sudarshan, V., Subramaniyan, S., & Purnaprajna, M. (2022, February). MAPPARAT: A Resource Constrained FPGA-Based Accelerator for Sparse-Dense Matrix Multiplication. In 2022 35th International Conference on VLSI Design and 2022 21st International Conference on Embedded Systems (VLSID) (pp. 102-107). IEEE.</p>
+              </li>
+              <li>
+                <p>K. Vanishree, A. George, S. Gunisetty, S. Subramanian, S. Kashyap R., and M. Purnaprajna, "CoIn: Accelerated CNN Co-Inference through Data Partitioning on Heterogeneous Devices," 2020 6th International Conference on Advanced Computing and Communication Systems (ICACCS), 2020, pp. 90-95, doi: 10.1109/ICACCS48705.2020.9074444.</p>
+              </li>
+            </ol>
 
-        <h2>Journal Papers</h2>
-        <ol>
-          <li>
-            <p>Ferraz, O., Subramaniyan, S., Chinthalaa, R., Andrade, J., Cavallaro, J. R., Nandy, S. K., ... & Falcao, G. (2021). A Survey on High-Throughput Non-Binary LDPC Decoders: ASIC, FPGA, and GPU Architectures. IEEE Communications Surveys & Tutorials, 24(1), 524-556.</p>
-          </li>
-          <li>
-            <p>S. Subramaniyan et al., "Enabling High-Level Design Strategies for High-Throughput and Low-Power NB-LDPC Decoders," in IEEE Design & Test, 2022, doi: 10.1109/MDAT.2022.3202852.</p>
-          </li>
-        </ol>
+            <h2>Journal Papers</h2>
+            <ol>
+              <li>
+                <p>Ferraz, O., Subramaniyan, S., Chinthalaa, R., Andrade, J., Cavallaro, J. R., Nandy, S. K., ... & Falcao, G. (2021). A Survey on High-Throughput Non-Binary LDPC Decoders: ASIC, FPGA, and GPU Architectures. IEEE Communications Surveys & Tutorials, 24(1), 524-556.</p>
+              </li>
+              <li>
+                <p>S. Subramaniyan et al., "Enabling High-Level Design Strategies for High-Throughput and Low-Power NB-LDPC Decoders," in IEEE Design & Test, 2022, doi: 10.1109/MDAT.2022.3202852.</p>
+              </li>
+            </ol>
 
-        <h2>Workshop Papers</h2>
-        <ol>
-          <li>
-            <p>Subramaniyan, Srinivasan, and Xiaorui Wang. "OptiCPD: Optimization For The Canonical Polyadic Decomposition Algorithm on GPUs." 2023 IEEE International Parallel and Distributed Processing Symposium Workshops (IPDPSW). IEEE, 2023.</p>
-          </li>
-          <li>
-            <p>S. Subramaniyan et al., "Pushing the Limits of Energy Efficiency for Non-Binary LDPC Decoders on GPUs and FPGAs," 2020 IEEE Workshop on Signal Processing Systems (SiPS), 2020, pp. 1-6, doi: 10.1109/SiPS50750.2020.9195258.</p>
-          </li>
-        </ol>
+            <h2>Workshop Papers</h2>
+            <ol>
+              <li>
+                <p>Subramaniyan, Srinivasan, and Xiaorui Wang. "OptiCPD: Optimization For The Canonical Polyadic Decomposition Algorithm on GPUs." 2023 IEEE International Parallel and Distributed Processing Symposium Workshops (IPDPSW). IEEE, 2023.</p>
+              </li>
+              <li>
+                <p>S. Subramaniyan et al., "Pushing the Limits of Energy Efficiency for Non-Binary LDPC Decoders on GPUs and FPGAs," 2020 IEEE Workshop on Signal Processing Systems (SiPS), 2020, pp. 1-6, doi: 10.1109/SiPS50750.2020.9195258.</p>
+              </li>
+            </ol>
 
-        <h2>Posters</h2>
-        <ol>
-          <li>
-            <p>Ferraz, O., Subramaniyan, S., Wang, G., Cavallaro, J. R., Falcao, G., & Purnaprajna, M. (2020, May). Gbit/s Non-Binary LDPC Decoders: High-Throughput Using High-Level Specifications. In 2020 IEEE 28th Annual International Symposium on Field-Programmable Custom Computing Machines (FCCM) (pp. 226-226). IEEE.</p>
-          </li>
-        </ol>
+            <h2>Posters</h2>
+            <ol>
+              <li>
+                <p>Ferraz, O., Subramaniyan, S., Wang, G., Cavallaro, J. R., Falcao, G., & Purnaprajna, M. (2020, May). Gbit/s non-binary LDPC decoders: High-throughput using high-level specifications. In 2020 IEEE 28th Annual International Symposium on Field-Programmable Custom Computing Machines (FCCM) (pp. 226-226). IEEE.</p>
+              </li>
+            </ol>
+          </div>
+
+          <div id="by-type" class="hidden">
+            <h2>Conference Papers</h2>
+            <ol>
+              <li>
+                <p>Chen, Guoyu, Srinivasan Subramaniyan, and Xiaorui Wang. "Latency-Guaranteed Co-Location of Inference and Training for Reducing Data Center Expenses" IEEE 44th International Conference on Distributed Computing Systems (ICDCS) 2024.</p>
+              </li>
+              <li>
+                <p>Ashuthosh, M. R., Krishna, S., Sudarshan, V., Subramaniyan, S., & Purnaprajna, M. (2022, February). MAPPARAT: A Resource Constrained FPGA-Based Accelerator for Sparse-Dense Matrix Multiplication. In 2022 35th International Conference on VLSI Design and 2022 21st International Conference on Embedded Systems (VLSID) (pp. 102-107). IEEE.</p>
+              </li>
+              <li>
+                <p>K. Vanishree, A. George, S. Gunisetty, S. Subramanian, S. Kashyap R., and M. Purnaprajna, "CoIn: Accelerated CNN Co-Inference through Data Partitioning on Heterogeneous Devices," 2020 6th International Conference on Advanced Computing and Communication Systems (ICACCS), 2020, pp. 90-95, doi: 10.1109/ICACCS48705.2020.9074444.</p>
+              </li>
+            </ol>
+
+            <h2>Journal Papers</h2>
+            <ol>
+              <li>
+                <p>Ferraz, O., Subramaniyan, S., Chinthalaa, R., Andrade, J., Cavallaro, J. R., Nandy, S. K., ... & Falcao, G. (2021). A Survey on High-Throughput Non-Binary LDPC Decoders: ASIC, FPGA, and GPU Architectures. IEEE Communications Surveys & Tutorials, 24(1), 524-556.</p>
+              </li>
+              <li>
+                <p>S. Subramaniyan et al., "Enabling High-Level Design Strategies for High-Throughput and Low-Power NB-LDPC Decoders," in IEEE Design & Test, 2022, doi: 10.1109/MDAT.2022.3202852.</p>
+              </li>
+            </ol>
+
+            <h2>Workshop Papers</h2>
+            <ol>
+              <li>
+                <p>Subramaniyan, Srinivasan, and Xiaorui Wang. "OptiCPD: Optimization For The Canonical Polyadic Decomposition Algorithm on GPUs." 2023 IEEE International Parallel and Distributed Processing Symposium Workshops (IPDPSW). IEEE, 2023.</p>
+              </li>
+              <li>
+                <p>S. Subramaniyan et al., "Pushing the Limits of Energy Efficiency for Non-Binary LDPC Decoders on GPUs and FPGAs," 2020 IEEE Workshop on Signal Processing Systems (SiPS), 2020, pp. 1-6, doi: 10.1109/SiPS50750.2020.9195258.</p>
+              </li>
+            </ol>
+
+            <h2>Posters</h2>
+            <ol>
+              <li>
+                <p>Ferraz, O., Subramaniyan, S., Wang, G., Cavallaro, J. R., Falcao, G., & Purnaprajna, M. (2020, May). Gbit/s non-binary LDPC decoders: High-throughput using high-level specifications. In 2020 IEEE 28th Annual International Symposium on Field-Programmable Custom Computing Machines (FCCM) (pp. 226-226). IEEE.</p>
+              </li>
+            </ol>
+          </div>
+        </div>
       </td>
     </tr>
+  </table>
+
   <footer>
     <p>Contact: <a href="mailto:srinivasan.subramaniyan4@osu.edu">srinivasan.subramaniyan4@osu.edu</a></p>
     <p>&copy; 2024 Srinivasan Subramaniyan</p>
   </footer>
+
+  <script>
+    function filterByYear() {
+      document.getElementById('by-year').classList.remove('hidden');
+      document.getElementById('by-type').classList.add('hidden');
+    }
+
+    function filterByType() {
+      document.getElementById('by-year').classList.add('hidden');
+      document.getElementById('by-type').classList.remove('hidden');
+    }
+  </script>
 </body>
 </html>
