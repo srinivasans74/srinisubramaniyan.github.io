@@ -1,44 +1,169 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<link rel="stylesheet" href="jemdoc.css" type="text/css" />
-<title>Honors and Awards</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Honors and Awards</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    /* Navigation Styles */
+    nav {
+      background: #333;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    nav a:hover {
+      color: #00aaff;
+    }
+
+    /* Layout Table Styles */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    #tlayout {
+      width: 100%;
+    }
+
+    #layout-menu {
+      background: #f4f4f4;
+      padding: 1rem;
+      width: 20%;
+      vertical-align: top;
+      border-right: 1px solid #ddd;
+    }
+
+    #layout-content {
+      padding: 1rem;
+      width: 80%;
+    }
+
+    .menu-category {
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .menu-item {
+      margin-bottom: 0.5rem;
+    }
+
+    .menu-item a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .menu-item a.current {
+      font-weight: 700;
+      color: #00aaff;
+    }
+
+    .menu-item a:hover {
+      text-decoration: underline;
+    }
+
+    /* Heading Styles */
+    h1, h2 {
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #003366;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    /* List Styles */
+    ul {
+      list-style-type: disc;
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    ul li p {
+      margin-bottom: 0;
+    }
+
+    /* Footer Styles */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #333;
+      color: white;
+    }
+  </style>
 </head>
 <body>
-<table summary="Table for page layout." id="tlayout">
-<tr valign="top">
-<td id="layout-menu">
-    <div class="menu-category">About</div>
-    <div class="menu-item"><a href="index.html" class="current">Home</a></div>
-    <div class="menu-item"><a href="CV_January21 (1).pdf">CV</a></div>
-    <div class="menu-item"><a href="https://www.linkedin.com/in/srinivasan-subramaniyan22/">Linkedin</a></div>
-    <div class="menu-item"><a href="https://scholar.google.com/citations?user=luGswuwAAAAJ&hl=en&oi=ao">Google Scholar</a></div>
-    <div class="menu-item"><a href="Academics.html">Academics</a></div>
-    <div class="menu-category">Research</div>
-    <div class="menu-item"><a href="publications.html">Publications</a></div>
-    <div class="menu-item"><a href="awards.html">Awards</a></div>
-    <div class="menu-category">Experience</div>
-    <div class="menu-item"><a href="fulltime.html">Work Experience</a></div>
-    <div class="menu-item"><a href="ta.html">TA&nbsp;duties</a></div>
-</td>
-<td id="layout-content">
-<div id="toptitle">
-<h1>Honors and Awards</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="CV_January21 (1).pdf">CV</a>
+    <a href="https://www.linkedin.com/in/srinivasan-subramaniyan22/">LinkedIn</a>
+    <a href="https://scholar.google.com/citations?user=luGswuwAAAAJ&hl=en&oi=ao">Google Scholar</a>
+    <a href="Academics.html">Academics</a>
+    <a href="publications.html">Publications</a>
+    <a href="awards.html" class="current">Awards</a>
+    <a href="fulltime.html">Work Experience</a>
+    <a href="ta.html">TA Duties</a>
+  </nav>
 
-<h2> Awards and Scholarships </h2>
-<ul>
-  <li>
-    BinLin Travel Grant Award (2023 & 2024).</p>
-  </li>
-  <li>
-    A.K. Choudhary Best Paper Award: 35th International Conference on VLSI Design and the 21st International Conference on Embedded Systems (VLSID 2022).</p>
-  </li>
-  <li>
-    Amrita Scholarship awarded during undergraduate studies at Amrita Vishwa Vidyapeetham.</p>
-  </li>
-</td>
-</tr>
-</table>
+  <div id="layout-content">
+    <div id="toptitle">
+      <h1>Honors and Awards</h1>
+    </div>
+
+    <h2>Awards and Scholarships</h2>
+    <ul>
+      <li>
+        <p>BinLin Travel Grant Award (2023 & 2024)</p>
+      </li>
+      <li>
+        <p>A.K. Choudhary Best Paper Award: 35th International Conference on VLSI Design and the 21st International Conference on Embedded Systems (VLSID 2022)</p>
+      </li>
+      <li>
+        <p>Amrita Scholarship awarded during undergraduate studies at Amrita Vishwa Vidyapeetham</p>
+      </li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Srinivasan Subramaniyan</p>
+  </footer>
 </body>
 </html>
