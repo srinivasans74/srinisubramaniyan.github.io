@@ -177,12 +177,20 @@
     /* Image Styles */
     .header-image {
       position: absolute;
-      top: 10px;
-      left: 10px;
       width: 80px; /* Adjust width as needed */
       height: auto;
       border-radius: 50%;
       z-index: 2;
+    }
+
+    .header-image.left {
+      top: 10px;
+      left: 10px;
+    }
+
+    .header-image.right {
+      top: 10px;
+      right: 10px;
     }
 
   </style>
@@ -205,9 +213,9 @@
     <div class="snowfall">
       <!-- Snowflakes dynamically generated in JavaScript -->
     </div>
-    <img src="6sigflgxu9z199koxpb5sv5cac3m.png" alt="Profile Image" class="header-image">
+    <img src="6sigflgxu9z199koxpb5sv5cac3m.png" alt="Profile Image" class="header-image left">
     <h1>Srinivasan Subramaniyan</h1>
-    <img src="IMG_5194.jpg" alt="Profile Image" class="header-image">
+    <img src="IMG_5194.jpg" alt="Profile Image" class="header-image right">
   </header>
 
   <main>
