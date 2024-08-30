@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Srinivasan Subramaniyan</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
   <style>
     /* General Reset */
     * {
@@ -14,7 +14,7 @@
     }
 
     body {
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Open Sans', sans-serif;
       line-height: 1.6;
       background-color: #f4f4f4;
       color: #333;
@@ -52,11 +52,10 @@
       position: relative;
       color: white;
       overflow: hidden;
-      background: #333; /* Default background */
     }
 
     header h1 {
-      font-size: 3rem;
+      font-size: 2rem; /* Smaller size for the header text */
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
       animation: flashingColors 5s infinite;
       z-index: 2;
@@ -81,7 +80,7 @@
       pointer-events: none;
       overflow: hidden;
       z-index: 1;
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba(0, 0, 0, 0.3); /* Slightly transparent background */
     }
 
     .snowflake {
@@ -161,23 +160,17 @@
       color: white;
     }
 
-    /* Visitor Counter Styles */
-    #visitor-counter {
-      text-align: center;
-      margin: 2rem 0;
-      font-size: 1.2rem;
-    }
-
     /* Video Player Styles */
     #video-section {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
       margin: 2rem 0;
-      text-align: center;
     }
 
     iframe {
-      width: 100%;
-      max-width: 800px;
-      height: 450px;
+      flex: 1;
+      height: 250px;
       border: none;
     }
 
@@ -199,20 +192,12 @@
 
   <header>
     <div class="snowfall">
-      <div class="snowflake"></div>
-      <div class="snowflake"></div>
-      <div class="snowflake"></div>
-      <!-- Add more snowflakes as needed -->
+      <!-- Snowflakes dynamically generated in JavaScript -->
     </div>
     <h1>Srinivasan Subramaniyan</h1>
   </header>
 
   <main>
-    <!-- Visitor Counter -->
-    <div id="visitor-counter">
-      <p>Visitors: <span id="visitor-count">0</span></p>
-    </div>
-
     <!-- About Me Section -->
     <section id="aboutme">
       <h2>About Me</h2>
@@ -255,7 +240,9 @@
 
     <!-- Video Section -->
     <div id="video-section">
-      <iframe id="youtube-video" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" allowfullscreen></iframe>
     </div>
 
   </main>
@@ -289,20 +276,6 @@
     // Initialize the quote rotation
     updateQuote();
 
-    // Rotating images in the header
-    const images = document.querySelectorAll("#image-container img");
-    let currentImageIndex = 0;
-
-    function rotateImages() {
-      images.forEach((img, index) => {
-        img.style.opacity = (index === currentImageIndex) ? "1" : "0";
-      });
-
-      currentImageIndex = (currentImageIndex + 1) % images.length;
-    }
-
-    setInterval(rotateImages, 4000); // Change image every 4 seconds
-
     // Snowfall effect
     function createSnowflakes() {
       const snowfallContainer = document.querySelector('.snowfall');
@@ -317,17 +290,6 @@
     }
 
     createSnowflakes();
-
-    // Example visitor counter
-    function updateVisitorCount() {
-      const visitorCountElement = document.getElementById('visitor-count');
-      let count = parseInt(visitorCountElement.textContent, 10);
-      setInterval(() => {
-        visitorCountElement.textContent = count++;
-      }, 1000); // Increment every second (this is just for demonstration)
-    }
-
-    updateVisitorCount();
   </script>
 
 </body>
