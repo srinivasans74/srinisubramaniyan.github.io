@@ -1,106 +1,215 @@
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<link rel="stylesheet" href="jemdoc.css" type="text/css" />
-<title>Publications</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publications</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    /* Navigation Styles */
+    nav {
+      background: #333;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    nav a:hover {
+      color: #00aaff;
+    }
+
+    /* Layout Table Styles */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    #tlayout {
+      width: 100%;
+    }
+
+    #layout-menu {
+      background: #f4f4f4;
+      padding: 1rem;
+      width: 20%;
+      vertical-align: top;
+      border-right: 1px solid #ddd;
+    }
+
+    #layout-content {
+      padding: 1rem;
+      width: 80%;
+    }
+
+    .menu-category {
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .menu-item {
+      margin-bottom: 0.5rem;
+    }
+
+    .menu-item a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .menu-item a.current {
+      font-weight: 700;
+      color: #00aaff;
+    }
+
+    .menu-item a:hover {
+      text-decoration: underline;
+    }
+
+    /* Heading Styles */
+    h1, h2 {
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #003366;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    /* List Styles */
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      margin-bottom: 1rem;
+    }
+
+    ul li p {
+      margin-bottom: 0;
+    }
+
+    /* Footer Styles */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #333;
+      color: white;
+    }
+
+  </style>
 </head>
 <body>
-<table summary="Table for page layout." id="tlayout">
-<tr valign="top">
-<td id="layout-menu">
-  <div class="menu-category">About</div>
-  <div class="menu-item"><a href="index.html" class="current">Home</a></div>
-  <div class="menu-item"><a href="CV_January21 (1).pdf">CV</a></div>
-  <div class="menu-item"><a href="https://www.linkedin.com/in/srinivasan-subramaniyan22/">Linkedin</a></div>
-  <div class="menu-item"><a href="https://scholar.google.com/citations?user=luGswuwAAAAJ&hl=en&oi=ao">Google Scholar</a></div>
-  <div class="menu-item"><a href="Academics.html">Academics</a></div>
-  <div class="menu-category">Research</div>
-  <div class="menu-item"><a href="publications.html">Publications</a></div>
-  <div class="menu-item"><a href="awards.html">Awards</a></div>
-  <div class="menu-category">Experience</div>
-  <div class="menu-item"><a href="fulltime.html">Work Experience</a></div>
-  <div class="menu-item"><a href="ta.html">TA&nbsp;duties</a></div>
-</td>
-<td id="layout-content">
-<div id="toptitle">
-<h1>Publications</h1>
-</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="CV_January21 (1).pdf">CV</a>
+    <a href="https://www.linkedin.com/in/srinivasan-subramaniyan22/">LinkedIn</a>
+    <a href="https://scholar.google.com/citations?user=luGswuwAAAAJ&hl=en&oi=ao">Google Scholar</a>
+    <a href="Academics.html">Academics</a>
+    <a href="publications.html" class="current">Publications</a>
+    <a href="awards.html">Awards</a>
+    <a href="fulltime.html">Work Experience</a>
+    <a href="ta.html">TA Duties</a>
+  </nav>
 
-<h2>Conference Paper </h2>
-<ul>
+  <table id="tlayout">
+    <tr valign="top">
+      <td id="layout-menu">
+        <div class="menu-category">About</div>
+        <div class="menu-item"><a href="index.html" class="current">Home</a></div>
+        <div class="menu-item"><a href="CV_January21 (1).pdf">CV</a></div>
+        <div class="menu-item"><a href="https://www.linkedin.com/in/srinivasan-subramaniyan22/">LinkedIn</a></div>
+        <div class="menu-item"><a href="https://scholar.google.com/citations?user=luGswuwAAAAJ&hl=en&oi=ao">Google Scholar</a></div>
+        <div class="menu-item"><a href="Academics.html">Academics</a></div>
+        <div class="menu-category">Research</div>
+        <div class="menu-item"><a href="publications.html" class="current">Publications</a></div>
+        <div class="menu-item"><a href="awards.html">Awards</a></div>
+        <div class="menu-category">Experience</div>
+        <div class="menu-item"><a href="fulltime.html">Work Experience</a></div>
+        <div class="menu-item"><a href="ta.html">TA Duties</a></div>
+      </td>
+      <td id="layout-content">
+        <div id="toptitle">
+          <h1>Publications</h1>
+        </div>
 
-  <li><p>
-    Chen, Guoyu, Srinivasan Subramaniyan, and Xiaorui Wang. "Latency-Guaranteed Co-Location of Inference and Training for Reducing Data Center Expenses" IEEE 44th International Conference on Distributed Computing Systems (ICDCS) 2024.
-  </p>
-  </li>
+        <h2>Conference Papers</h2>
+        <ul>
+          <li>
+            <p>Chen, Guoyu, Srinivasan Subramaniyan, and Xiaorui Wang. "Latency-Guaranteed Co-Location of Inference and Training for Reducing Data Center Expenses" IEEE 44th International Conference on Distributed Computing Systems (ICDCS) 2024.</p>
+          </li>
+          <li>
+            <p>Ashuthosh, M. R., Krishna, S., Sudarshan, V., Subramaniyan, S., & Purnaprajna, M. (2022, February). MAPPARAT: A Resource Constrained FPGA-Based Accelerator for Sparse-Dense Matrix Multiplication. In 2022 35th International Conference on VLSI Design and 2022 21st International Conference on Embedded Systems (VLSID) (pp. 102-107). IEEE.</p>
+          </li>
+          <li>
+            <p>K. Vanishree, A. George, S. Gunisetty, S. Subramanian, S. Kashyap R., and M. Purnaprajna, "CoIn: Accelerated CNN Co-Inference through Data Partitioning on Heterogeneous Devices," 2020 6th International Conference on Advanced Computing and Communication Systems (ICACCS), 2020, pp. 90-95, doi: 10.1109/ICACCS48705.2020.9074444.</p>
+          </li>
+        </ul>
 
-<li>
-  <p>
-    Ashuthosh, M. R., Krishna, S., Sudarshan, V., Subramaniyan, S., & Purnaprajna, M. (2022, February). MAPPARAT: A Resource Constrained FPGA-Based Accelerator for Sparse-Dense Matrix Multiplication. In 2022 35th International Conference on VLSI Design and 2022 21st International Conference on Embedded Systems (VLSID) (pp. 102-107). IEEE.
- </p>
-</li>
-    
-<li>
-<p>
- K. Vanishree, A. George, S. Gunisetty, S. Subramanian, S. Kashyap R. and M. Purnaprajna, "CoIn: Accelerated CNN Co-Inference through data partitioning on heterogeneous devices," 2020 6th International Conference on Advanced Computing and Communication Systems (ICACCS), 2020, pp. 90-95, doi: 10.1109/ICACCS48705.2020.9074444.
-</p>
-</li>
+        <h2>Journal Papers</h2>
+        <ul>
+          <li>
+            <p>Ferraz, O., Subramaniyan, S., Chinthalaa, R., Andrade, J., Cavallaro, J. R., Nandy, S. K., ... & Falcao, G. (2021). A Survey on High-Throughput Non-Binary LDPC Decoders: ASIC, FPGA, and GPU Architectures. IEEE Communications Surveys & Tutorials, 24(1), 524-556.</p>
+          </li>
+          <li>
+            <p>S. Subramaniyan et al., "Enabling High-Level Design Strategies for High-Throughput and Low-Power NB-LDPC Decoders," in IEEE Design & Test, 2022, doi: 10.1109/MDAT.2022.3202852.</p>
+          </li>
+        </ul>
 
-  
-</ul>
+        <h2>Workshop Papers</h2>
+        <ul>
+          <li>
+            <p>Subramaniyan, Srinivasan, and Xiaorui Wang. "OptiCPD: Optimization For The Canonical Polyadic Decomposition Algorithm on GPUs." 2023 IEEE International Parallel and Distributed Processing Symposium Workshops (IPDPSW). IEEE, 2023.</p>
+          </li>
+          <li>
+            <p>S. Subramaniyan et al., "Pushing the Limits of Energy Efficiency for Non-Binary LDPC Decoders on GPUs and FPGAs," 2020 IEEE Workshop on Signal Processing Systems (SiPS), 2020, pp. 1-6, doi: 10.1109/SiPS50750.2020.9195258.</p>
+          </li>
+        </ul>
 
+        <h2>Posters</h2>
+        <ul>
+          <li>
+            <p>Ferraz, O., Subramaniyan, S., Wang, G., Cavallaro, J. R., Falcao, G., & Purnaprajna, M. (2020, May). Gbit/s Non-Binary LDPC Decoders: High-Throughput Using High-Level Specifications. In 2020 IEEE 28th Annual International Symposium on Field-Programmable Custom Computing Machines (FCCM) (pp. 226-226). IEEE.</p>
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </table>
 
-
-<h2>Journal Paper </h2>
-<ul>
-<li>
-<p>
-  Ferraz, O., Subramaniyan, S., Chinthalaa, R., Andrade, J., Cavallaro, J. R., Nandy, S. K., ... & Falcao, G. (2021). A Survey on High-Throughput Non-Binary LDPC Decoders: ASIC, FPGA, and GPU Architectures. IEEE Communications Surveys & Tutorials, 24(1), 524-556.
-</p>
-</li>
- 
-<li>
-<p>
-S. Subramaniyan et al., "Enabling High-Level Design Strategies for High-Throughput and Low-power NB-LDPC Decoders," in IEEE Design & Test, 2022, doi: 10.1109/MDAT.2022.3202852.</p>
-</li>
-  
-  
-</ul>
-  
- 
- <h2>Workshop Paper </h2>
-<ul>
-<li>
-  <p>
-    Subramaniyan, Srinivasan, and Xiaorui Wang. "OptiCPD: Optimization For The Canonical Polyadic Decomposition Algorithm on GPUs." 2023 IEEE International Parallel and Distributed Processing Symposium Workshops (IPDPSW). IEEE, 2023.
-  </p>
-  </li>
-
-
-<li>
-<p>
-  S. Subramaniyan et al., "Pushing the Limits of Energy Efficiency for Non-Binary LDPC Decoders on GPUs and FPGAs," 2020 IEEE Workshop on Signal Processing Systems (SiPS), 2020, pp. 1-6, doi: 10.1109/SiPS50750.2020.9195258.
-</p>
-</li>
- 
-
-  
-</ul>
-  
-  
-  
-
-<h2>Posters</h2>
-<ul>
-<li>
-  <p>Ferraz, O., Subramaniyan, S., Wang, G., Cavallaro, J. R., Falcao, G., & Purnaprajna, M. (2020, May). Gbit/s non-binary LDPC decoders: High-throughput using high-level specifications. In 2020 IEEE 28th Annual International Symposium on Field-Programmable Custom Computing Machines (FCCM) (pp. 226-226). IEEE.</p>
-</li>
-</ul>
-
-
-</td>
-</tr>
-</table>
+  <footer>
+    <p>Contact: <a href="mailto:srinivasan.subramaniyan4@osu.edu">srinivasan.subramaniyan4@osu.edu</a></p>
+    <p>&copy; 2024 Srinivasan Subramaniyan</p>
+  </footer>
 </body>
 </html>
